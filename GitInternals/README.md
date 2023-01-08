@@ -1,4 +1,4 @@
-#Project: Git Internals
+# Project: Git Internals
 Project of the track Kotlin Developer
 
 Level: Challenging
@@ -10,7 +10,7 @@ You only need to know a few Git CLI commands for this project, or you can use Gi
 You don’t need to know what happens under the hood of Git when everything is working as it should, 
 but if something goes wrong it is very difficult to find a solution without knowing the underlying logic.
 
-###What is a Git object
+### What is a Git object
 
 Here’s a recap of some key points you may have learned about Git:
 + Git objects are stored in the .git/objects subdirectory of your project 
@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=P6jD966jzlk
 
 https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
 
-###Git has three types of objects:
+### Git has three types of objects:
 + **Blob** stores file contents
 
 + **Tree** stores directory structure with filenames and subdirectories
@@ -57,7 +57,8 @@ Any Git object file starts with a header. The header is a null-terminated string
     commit message:
     get docs from feature1
 
-###Branches
+### Branches
+
 Lightweight branches are known as one of the best features of Git. 
 In Git, a branch is just one commit object.
 
@@ -78,7 +79,9 @@ The list of available branches can be accessed with the `git branch -l` command.
     feature1
     feature2
     * master
-###Git log
+
+### Git log
+
 What happens when you ask Git for the log using the git log command? 
 Git iterates through the commits using parent links until it reaches a commit with no parents. 
 This orphan commit is the initial commit for your repo.
@@ -104,7 +107,9 @@ This orphan commit is the initial commit for your repo.
     Commit: 31cddcbd00e715688cd127ad20c2846f9ed98223
     Kalinka Kali.k4@email.com commit timestamp: 2021-12-11 22:31:36 -03:00
     simple hello
-###Full tree
+
+### Full tree
+
     Enter .git directory location:
     > myproject/.git
     Enter command:
